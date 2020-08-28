@@ -25,6 +25,13 @@ def add_recipe():
     return render_template('add_recipe.html')
 
 
+@app.route('/insert_recipe', methods=['POST'])
+def insert_recipe():
+    recipe = mongo.db.recipe
+    recipe.insert_one(request.form.to_dict())
+    return redirect(url_for('recipe_list'))
+
+
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),

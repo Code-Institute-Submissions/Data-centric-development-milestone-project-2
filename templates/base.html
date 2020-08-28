@@ -5,8 +5,7 @@
        <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     </head>
     <body>
-        <h1>Recipe List</h1>
-        {% block content %}
+               {% block content %}
         {% endblock %}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
@@ -14,8 +13,7 @@
             $(document).ready(function() {
                 $('.collapsible').collapsible();
             });
-            $('#textarea1').val('New Text');
-                M.textareaAutoResize($('#textarea1'));
+           
         </script>
        
     </body>
