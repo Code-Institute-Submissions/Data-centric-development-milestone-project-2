@@ -1,15 +1,20 @@
-<html>
-    <head>
-
-    </head>
-    <body>
+{% extends 'base.html' %}
+{% block content %}
         {% for item in recipe %}
-            {{item.title}}
-            {{item.description}}
-            {{item.cuisine_name}}
-            {{item.type_name}}
-            {{item.ingredients}}
-            {{item.preparation_step}}
+            <ul>
+                <h5>Recipe Title: {{item.title}}</h5>
+                <h5>Description: {{item.description}} </h5>
+                <h5>Cuisine: {{item.cuisine_name}}</h5>
+                <h5>Type: {{item.type_name}}</h5>
+                 <h5>Ingredients</h5>
+                    {% for i in item.ingredients %}
+                        <li> {{i}}</li>
+                    {% endfor %}
+                    <h5>Method</h5>
+                     {% for j in item.method %}
+                        <li> {{j}}</li>
+                    {% endfor %}
+                   
+            </ul>
         {% endfor %}
-    </body>
-</html>
+ {% endblock %}
