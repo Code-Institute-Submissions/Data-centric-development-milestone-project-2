@@ -1,0 +1,15 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        {% for item in recipe %}
+            {{item.title}}
+            {{item.description}}
+            {{item.cuisine_name}}
+            {{item.type_name}}
+            {{item.ingredients}}
+            {{item.preparation_step}}
+        {% endfor %}
+    </body>
+</html>
