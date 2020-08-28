@@ -1,0 +1,44 @@
+{% extends 'base.html' %} {% block content %}
+<h3>Add Recipe</h3>
+<div class="row">
+    <form  action="" method="POST" class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <i class="material-icons prefix">title</i>
+                <input id="title" type="text" class="validate">
+                <label for="title">Recipe Title</label>
+            </div>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">local_dining</i>
+                <input id="cuisine_name" type="tel" class="validate">
+                <label for="cuisine_name">Cuisine Name</label>
+            </div>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">room_service</i>
+                <input id="type_name" type="tel" class="validate">
+                <label for="type_name">Type</label>
+            </div>
+            <div class="input-field col s6">
+                <i class="material-icons prefix">description</i>
+                <input id="description" type="tel" class="validate">
+                <label for="description">Recipe Description</label>
+            </div>
+             <div class="input-field col s6">
+                <i class="material-icons prefix">Method</i>
+                <input id="preparation_method" type="tel" class="validate">
+                <label for="preparation_method">Preparation_method</label>
+            </div>
+             <div class="input-field col s6">
+                <i class="material-icons prefix">shopping_basket</i>
+                <input id="ingredients" type="tel" class="validate">
+                <label for="ingredients">Ingredients</label>
+            </div>
+                <div class="input-field col s6">
+                <i class="material-icons prefix">image</i>
+                <input id="recipe_image" type="tel" class="validate">
+                <label for="recipe_image">Image</label>
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
