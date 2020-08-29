@@ -5,17 +5,18 @@
             <ul>
                 <h5>Recipe Title: {{item.title}}</h5>
                 <h5>Description: {{item.description}} </h5>
+                <img height="400" width= "400" src="{{item.image}}" alt="{{item.title}}">
                 <h5>Cuisine: {{item.cuisine_name}}</h5>
                 <h5>Type: {{item.type_name}}</h5>
                 <h5>Ingredients</h5>
                 <ol>
-                    {% for i in item.ingredients %}
+                    {% for i in item.ingredients_name %}
                         
                             <li> {{i}}</li>
                       
                     {% endfor %}
                  </ol>    
-                    <h5>Method</h5>
+                <h5>Method</h5>
                     <ol>
                         {% for j in item.method %}
                             <li> {{j}}</li>
