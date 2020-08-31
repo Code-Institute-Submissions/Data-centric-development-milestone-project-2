@@ -5,10 +5,14 @@
             {% for item in recipe %}
                 <li>
                     <div class="collapsible-header">
-
-                        <div class=" task_header col s9">
-                           
-                            <i class="material-icons">expand_more</i><strong>{{item.title}}</strong> - {{item.cuisine_name}}
+                        <div class="col s3">
+                            <i class="material-icons">expand_more</i>
+                            <img src="{{item.image}}" height ="100" width="100"alt="image">
+                        </div>
+                        <div class="task_header col s9" style="margin-left:50px">
+                            <strong>{{item.title}}</strong> - {{item.cuisine_name}} <br>
+                            <a href="{{url_for('view_recipe', recipe_id=item._id)}}"class="waves-effect waves-light btn btn_small">view</a>
+                            <a href="{{url_for('edit_recipe', recipe_id=item._id)}}" class="waves-effect waves-light btn btn_small blue">Edit</a>
                         </div>
                     </div>
                     <div class="collapsible-body">

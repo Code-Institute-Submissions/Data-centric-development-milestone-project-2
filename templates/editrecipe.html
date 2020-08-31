@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
-<h3>View Recipe</h3>
+<h3>Edit Recipe</h3>
 <div class="row">
-    <form action="{{ url_for('view_recipe', recipe_id=item._id) }}" method="POST"  class="col s12">
+    <form action="{{ url_for('update_recipe', recipe_id=item._id) }}" method="POST"  class="col s12">
         <div class="row">
             <div class="input-field col s6">
                 <i class="material-icons prefix">title</i>
@@ -45,8 +45,9 @@
                 <label for="image">Image</label>
             </div>
         </div>
-        <a href="{{url_for('recipe_list')}}" class="waves-effect waves-light btn btn_small blue">Back to Recipe list</a>
-        
+        <button class="btn waves-effect waves-light" type="submit" name="action">Update recipe
+            <i class="material-icons right">send</i>
+        </button>
     </form>
 </div>
 {% endblock %}
