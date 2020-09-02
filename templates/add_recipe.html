@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% block content %}
 <h3>Add Recipe</h3>
 <div class="row">
-    <form action="{{ url_for('insert_recipe') }}" method="POST"  class="col s12">
+    <form action="{{ url_for('insert_recipe') }}" method="POST"  class="col s12" id="add_items">
         <div class="row">
             <div class="input-field col s6">
                 <i class="material-icons prefix">title</i>
@@ -18,26 +18,29 @@
                 <input id="type_name" type="text" name="type_name" class="validate">
                 <label for="type_name">Type</label>
             </div>
-            <div class="input-field col s6">
+            
+             <div class="input-field col s6">
+                <i class="material-icons prefix">image</i>
+                <input id="image" type="text" name="image" class="file-path validate">
+                <label for="image">Image</label>
+            </div>
+
+            <div class="input-field col s12">
                 <i class="material-icons prefix">description</i>
                 <input id="description" name="description" type="text" >
                 <label for="description">Recipe Description</label>
             </div>
-            <div class="input-field col s6">
+            
+            <div class="input-field col s12">
                 <i class="material-icons prefix">shopping_basket</i>
-                <label for="ingredients">Ingredients</label>
-                <input id="ingredients_name" name="ingredients_name" type="text">
+                <br><button id="ing_btn" type="button">+</button>
+                <label for="name">Ingredients</label><br>
             </div>
+
             <div class="input-field col s12">
                 <i class="material-icons prefix">Method</i>
-                <textarea id="method"  name="method" class="materialize-textarea" type="textarea"></textarea>
+                <button id="method_btn" type="button">+</button>
                 <label for="method">Method</label>
-            </div>
-            
-            <div class="input-field col s6">
-                <i class="material-icons prefix">image</i>
-                <input id="image" type="text" name="image" class="file-path validate">
-                <label for="image">Image</label>
             </div>
         </div>
         <button class="btn waves-effect waves-light" type="submit" name="action">Post recipe

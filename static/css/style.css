@@ -5,7 +5,24 @@
     margin: 5px 5px;
     padding: 0 0.5em;
 }
-
+.name{
+  display: block;
+}
 .task_header {
     margin-top: 5px;
+}
+
+#dynInp0 input:last-of-type {
+  display: none;
+}
+input {
+  font: inherit;
+}
+[type='text'] {
+  width: 20ch;
+  line-height: 1.1;
+}
+[type='button'] {
+  width: 2.5ch;
+  height: 2.7ex;
 }
