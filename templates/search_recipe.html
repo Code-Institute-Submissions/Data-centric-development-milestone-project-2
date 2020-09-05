@@ -2,42 +2,47 @@
 {% block content %}
 
 <h3>Search the recipes here</h3>
-<div class="container search-form">
-  <div class="row input-field search-div">
-    <h6>Select one of the options to search for your favourite recipes</h6>
-    <form class="search-form-form" action="/get_recipes">
-        <div class="row">
-            <div class="form-field-div col s6 m4">
-                <p>search by recipe_name:</p>
-                <input type="text" name="recipe_name" value="">
-            </div> 
-             
-            <div class="form-field-div col s6 m4">
-                <p>search by ingredients:</p>
-                <input type="text" name="ingredients" value="">
+ <div class="row card-panel grey lighten-5">
+        <form class="col s12" action="{{ url_for('get_recipe') }}" method="POST">
+            <div class="row valign-wrapper center-align">
+                <div class="input-field col s12 m8">
+                    <i class="fas fa-search prefix light-blue-text text-darken-4"></i>
+                   
+                    <input type="text" id="query" name="query" minlength="3" class="validate" required>
+                    <label for="query">Enter the keyword for search</label>
+                </div>
+                <div class="col s12 m4">
+                    <button class="light-blue darken-1 btn text-shadow" type="submit">
+                        <i class="fas fa-search left"></i> Search
+                    </button>
+                    <a href="{{ url_for('get_recipe') }}" class="red btn text-shadow">Reset</a>
+                </div>
             </div>
+        </form>
+    </div> 
+   
 
-            <div class="form-field-div col s6 m4">
-                <p>search by Cuisine:</p>
-                <input type="text" name="cuisine" value="">
+<div class="row text-center">
+  {% for item in results %}
+    <div class="col s12 m7">
+            <div class="card">
+                <div class="card-image">
+                    <img class="responsive-img" src="{{item.image}}" height="100" width="200">
+                    <span class="card-title">{{item.title}}</span>
+                </div>
+                <div class="card-content">
+                    <p>{{item.description}}</p>
+                </div>
+                <div class="card-action">
+                    <a href="{{url_for('view_recipe', recipe_id=item._id)}}">View</a>
+                    <a href="{{url_for('edit_recipe', recipe_id=item._id)}}">Edit</a>
+                    <a href="{{url_for('delete_recipe', recipe_id=item._id)}}">Delete</a>
+                </div>
             </div>
-            <div class="form-field-div col s6 m4">
-                <p>search by type:</p>
-                <input type="text" name="type" value="">
-            </div>
-            
         </div>
-        <div class="row">
-            <div class="col s6 l4">
-                <input class="btn btn-search" type="submit" value="Search">
-            </div>
-        </div>
-    </form>
-    
-  </div>
-</div>
-
-
+  {% endfor %}
+   
+  
 
 
 {% endblock %} 

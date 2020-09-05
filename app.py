@@ -19,6 +19,21 @@ def home():
 def search_recipe():
     return render_template("search_recipe.html")
 
+@app.route('/get_recipe',methods=['POST','GET'])
+def get_recipe():
+        query = request.form.get("query")
+        results = mongo.db.recipe.find({
+        '$or': [
+            {'title': query},
+            {'ingredient': query},
+            {'type_name': query},
+            {'cuisine_name': query}
+            ]
+        })
+        print(results)
+        return render_template('recipe_list.html', query=query, recipe=results)
+
+
 @app.route('/recipe_list')
 def recipe_list():
     return render_template("recipe_list.html", recipe=mongo.db.recipe.find())
