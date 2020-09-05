@@ -13,12 +13,12 @@
                     <a href="{{url_for('recipe_list')}}" class="brand-logo">Task Manager</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul id="nav-mobile" class="right hide-on-med-and-down">
-                        <li><a href="{{url_for('recipe_list')}}">Home</a></li>
+                        <li><a href="{{url_for('home')}}">Home</a></li>
                         <li><a href="{{url_for('recipe_list')}}">Recipe Index</a></li>
                         <li><a href="{{url_for('add_recipe')}}">Manage Recipe</a></li>
                     </ul>
                     <ul class="side-nav" id="mobile-demo">
-                        <li><a href="{{url_for('recipe_list')}}">Home</a></li>
+                        <li><a href="{{url_for('home')}}">Home</a></li>
                         <li><a href="{{url_for('recipe_list')}}">Recipe Index</a></li>
                         <li><a href="{{url_for('add_recipe')}}">Manage recipe</a></li>
                     </ul>
@@ -38,29 +38,56 @@
              });    
 
         </script>
-        <script>
-            (function() {
-                console.log("Inside function")
-                var counter = 1;
-                var btn = document.getElementById('ing_btn');
-                var form = document.getElementById('add_items');
-                console.log(btn);
-                console.log(form);
-                var addInput = function() {
-                    counter++;
-                    var input = document.createElement("input");
-                    input.id = 'ingredient-' + counter;
+         <script>
+            function addInput(category) {
+                 if (category == 'steps') {
+                    console.log(category)
+                    const method = document.querySelector('#steps');
+                    console.log("method"+method)
+                    const input = document.createElement('input');
+                    input.className = 'input';
                     input.type = 'text';
-                    input.name = 'name';
-                    input.placeholder = 'Input number ' + counter;
-                    form.appendChild(input);
-                    console.log("inside addinput function")
-                };
-                ing_btn.addEventListener('click', function() {
-                    addInput();
-                }.bind(this));
-            })();
+                    input.name = `step`
+                    method.appendChild(input);
+                    console.log(method)
+                    console.log(length)
+                    console.log(input)
+                }else{
+                    console.log(category)
+                    const ingredients = document.querySelector('#ingredients');
+                    const input = document.createElement('input');
+                    input.className = 'input';
+                    input.type = 'text';
+                    input.name = `ingredient`
+                    ingredients.appendChild(input);
+                    console.log(ingredients)
+                    console.log(length)
+                    console.log(input)
+                }
+            }
+            function removeInput(category) {
+                if (category == 'steps') {
+                    const method = document.querySelector('#steps');
+                    method.removeChild(steps.lastElementChild);
+                }
+                else{
+                console.log(category)
+                const ingredients = document.querySelector('#ingredients');
+                 ingredients.removeChild(ingredients.lastElementChild);
+                } 
+            }
+
+            function eventListeners() {
+                    if ((window.location.href.includes('add_recipe')) || (window.location.href.includes('edit_recipe'))) {
+                    document.querySelector('#add-ingredient').onclick = () => addInput('ingredient');
+                    document.querySelector('#remove-ingredient').onclick = () => removeInput('ingredient');
+                    document.querySelector('#add-step').onclick = () => addInput('steps');
+                    document.querySelector('#remove-step').onclick = () => removeInput('steps');
+                }
+            }   
+            eventListeners();
         </script>
-        
+           
+    
     </body>
 </html>

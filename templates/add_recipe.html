@@ -31,17 +31,29 @@
                 <label for="description">Recipe Description</label>
             </div>
             
-            <div class="input-field col s12">
-                <i class="material-icons prefix">shopping_basket</i>
-                <br><button id="ing_btn" type="button">+</button>
-                <label for="name">Ingredients</label><br>
-            </div>
-
-            <div class="input-field col s12">
-                <i class="material-icons prefix">Method</i>
-                <button id="method_btn" type="button">+</button>
-                <label for="method">Method</label>
-            </div>
+                <div id="ingredients" class="input-field col s6">
+                    <i class="material-icons prefix">shopping_basket</i>
+                    <label for="ingredients">Ingredients</label>
+                    <input class="input" type="text" name="ingredient" value="">
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">add</i>
+                    <input id="add-ingredient" type="button"  value="Add Ingredient" style="width:auto;height:auto">
+                    <i class="material-icons prefix">remove</i>
+                    <input id="remove-ingredient" type="button" value="Remove Ingredient" style="width:auto;height:auto">
+                </div>
+                <div id="steps" class="input-field col s12">
+                    <i class="material-icons prefix">list</i>
+                    <label for="steps">Method</label>
+                    <input class="input" type="text" name="step" value="">
+                </div>
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">add</i>
+                    <input id="add-step" type="button"  value="Add a step" style="width:auto;height:auto">
+                    <i class="material-icons prefix">remove</i>
+                    <input id="remove-step" type="button" value="Remove a step" style="width:auto;height:auto">
+                </div>
+         
         </div>
         <button class="btn waves-effect waves-light" type="submit" name="action">Post recipe
             <i class="material-icons right">send</i>

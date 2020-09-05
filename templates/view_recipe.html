@@ -23,22 +23,21 @@
                 <input id="description" name="description" type="text" value="{{item.description}}" >
                 <label for="description">Recipe Description</label>
             </div>
-            <div class="input-field col s6">
+            <div id="ingredients" class="input-field col s6">
                 <i class="material-icons prefix">shopping_basket</i>
                 <label for="ingredients">Ingredients</label>
                 {% for i in item.ingredients %}
-                    <input id="ingredients_name" name="ingredients_name" type="text" value="{{i}}">
-                {% endfor %}    
+                    <input class="input" type="text" value="{{i}}">
+                {% endfor %}  
+
             </div>
-           
             <div class="input-field col s12">
                 <i class="material-icons prefix">Method</i>
                 {% for j in item.method %}
-                    <input id="method"  name="method" class="materialize-textarea" type="text" value="{{j}}">
+                    <input class="input" type="text" name="step" value="{{j}}">
                 {% endfor %}  
                 <label for="method">Method</label>
             </div>
-            
             <div class="input-field col s6">
                 <i class="material-icons prefix">image</i>
                 <input id="image" type="text" name="image" class="file-path validate" value="{{item.image}}">

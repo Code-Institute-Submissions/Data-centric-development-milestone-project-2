@@ -1,34 +1,33 @@
 {% extends 'base.html' %}
 {% block content %}
+        <div class="image-home"> 
+        <h2>Welcome to CookBook</h2>
+        <img src="../static/image/img1.jpg" alt="sorry!">
+            <div class="row">
+                <div class="l12 m12 s12" style="clear:both">
+                    <div class="card" style="width:300px;display:inline-block">
+                        <div class="card-image">
+                            <img src="../static/image/img2.jpg">
+                        </div>
+                        <div class="card-action">
+                            <a href="{{url_for('search_recipe')}}">Search a Recipe</a>
+                        </div>
+                    </div>  
+                </div>
+                <div class="l12 m12 s12" style="clear:both">      
+                    <div class="card" style="width:300px;display:inline-block">
+                        <div class="card-image">
+                            <img src="../static/image/img4.jpg">
+                        </div>
+                        <div class="card-action">
+                            <a href="{{url_for('add_recipe')}}">Add a Recipe</a>
+                        </div>
+                    </div>    
+                </div>
+            </div>    
 
-<div class="carousel carousel-slider">
-    <a class="carousel-item" href="#"><img src="https://lorempixel.com/800/400/food/1"></a>
-    <a class="carousel-item" href="#"><img src="https://lorempixel.com/800/400/food/2"></a>
-    <a class="carousel-item" href="#"><img src="https://lorempixel.com/800/400/food/3"></a>
-    <a class="carousel-item" href="#"><img src="https://lorempixel.com/800/400/food/4"></a>
-</div>
-
-<div class="row">
-    {% for item in recipe %}
-        <div class="col s12 m7">
-            <div class="card">
-                <div class="card-image">
-                    <img src="{{item.image}}" height="200" width="200">
-                    <span class="card-title">{{item.title}}</span>
-                </div>
-                <div class="card-content">
-                    <p>{{item.description}}</p>
-                </div>
-                <div class="card-action">
-                    <a href="{{url_for('view_recipe', recipe_id=item._id)}}">View</a>
-                    <a href="{{url_for('edit_recipe', recipe_id=item._id)}}">Edit</a>
-                    <a href="{{url_for('delete_recipe', recipe_id=item._id)}}">Delete</a>
-                </div>
-            </div>
-        </div>
-    {% endfor %} 
-</div>
-              
+           
+  </div>
           
 {% endblock %}    
 

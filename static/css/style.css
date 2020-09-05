@@ -5,16 +5,10 @@
     margin: 5px 5px;
     padding: 0 0.5em;
 }
-.name{
+.name,.steps{
   display: block;
 }
-.task_header {
-    margin-top: 5px;
-}
 
-#dynInp0 input:last-of-type {
-  display: none;
-}
 input {
   font: inherit;
 }
@@ -26,3 +20,4 @@ input {
   width: 2.5ch;
   height: 2.7ex;
 }
+

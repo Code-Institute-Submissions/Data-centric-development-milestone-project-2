@@ -12,6 +12,12 @@ mongo = PyMongo(app)
 
 
 @app.route('/')
+def home():
+    return render_template("home.html")
+
+@app.route('/search_recipe')
+def search_recipe():
+    return render_template("search_recipe.html")
 
 @app.route('/recipe_list')
 def recipe_list():
@@ -32,12 +38,15 @@ def add_recipe():
 def insert_recipe():
     recipe = mongo.db.recipe
     recipe_dict=request.form.to_dict()
-    ingredients=recipe_dict['ingredients_name'].split(',')
-    recipe_dict['ingredients_name']=ingredients
-    method=recipe_dict['method'].split(',')
+    ingredients = request.form.getlist('ingredient')
+    recipe_dict['ingredients']=ingredients
+    method = request.form.getlist('step')
     recipe_dict['method']=method
+    print(ingredients)
+    print(method)
+    print(recipe_dict)
+    print("inside insertrecipe app.py")
     recipe.insert_one(recipe_dict)
-    print(request.form)
     return redirect(url_for('recipe_list'))
 
 
@@ -51,13 +60,20 @@ def edit_recipe(recipe_id):
 @app.route('/update_recipe/<recipe_id>', methods=["POST"])
 def update_recipe(recipe_id):
     recipe = mongo.db.recipe
+    recipe_dict=request.form.to_dict()
+    ingredients = request.form.getlist('ingredient')
+    recipe_dict['ingredients']=ingredients
+    method = request.form.getlist('step')
+    recipe_dict['method']=method
     recipe.update({'_id': ObjectId(recipe_id)},
     {
         'title': request.form.get('title'),
         'cuisine_name': request.form.get('cuisine_name'),
         'description': request.form.get('description'),
         'type_name': request.form.get('type_name'),
-        'image': request.form.get('image')
+        'image': request.form.get('image'),
+        'ingredients': request.form.getlist('ingredient'),
+        'method': request.form.getlist('step')
     })
     return redirect(url_for('recipe_list'))
 
