@@ -5,36 +5,36 @@
         <div class="row">
             <div class="input-field col s6">
                 <i class="material-icons prefix">title</i>
-                <input id="title" type="text" name="title" class="validate">
+                <input id="title" type="text" name="title" class="validate" required>
                 <label for="title">Recipe Title</label>
             </div>
             <div class="input-field col s6">
                 <i class="material-icons prefix">local_dining</i>
-                <input id="cuisine_name" name="cuisine_name" type="text" class="validate">
+                <input id="cuisine_name" name="cuisine_name" type="text" class="validate" required>
                 <label for="cuisine_name">Cuisine Name</label>
             </div>
             <div class="input-field col s6">
                 <i class="material-icons prefix">room_service</i>
-                <input id="type_name" type="text" name="type_name" class="validate">
+                <input id="type_name" type="text" name="type_name" class="validate" required>
                 <label for="type_name">Type</label>
             </div>
             
              <div class="input-field col s6">
                 <i class="material-icons prefix">image</i>
-                <input id="image" type="text" name="image" class="file-path validate">
-                <label for="image">Image</label>
+                <input id="image" type="text" name="image" class="file-path validate" required>
+                <label for="image">Image Url</label>
             </div>
 
             <div class="input-field col s12">
                 <i class="material-icons prefix">description</i>
-                <input id="description" name="description" type="text" >
+                <input id="description" name="description" type="text" required >
                 <label for="description">Recipe Description</label>
             </div>
             
                 <div id="ingredients" class="input-field col s6">
                     <i class="material-icons prefix">shopping_basket</i>
                     <label for="ingredients">Ingredients</label>
-                    <input class="input" type="text" name="ingredient" value="">
+                    <input class="input" type="text" name="ingredient" value="" required>
                 </div>
                 <div class="input-field col s12">
                     <i class="material-icons prefix">add</i>
@@ -45,7 +45,7 @@
                 <div id="steps" class="input-field col s12">
                     <i class="material-icons prefix">list</i>
                     <label for="steps">Method</label>
-                    <input class="input" type="text" name="step" value="">
+                    <input class="input" type="text" name="step" value="" required>
                 </div>
                 <div class="input-field col s12">
                     <i class="material-icons prefix">add</i>

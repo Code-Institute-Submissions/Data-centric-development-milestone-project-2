@@ -1,67 +1,57 @@
-{% extends 'base.html' %}
-{% block content %}
-        <div class="image-home"> 
-        <h2>Welcome to CookBook</h2>
-        <img src="../static/image/img1.jpg" alt="sorry!">
-            <div class="row">
-                <div class="l12 m12 s12" style="clear:both">
-                    <div class="card" style="width:300px;display:inline-block">
-                        <div class="card-image">
-                            <img src="../static/image/img2.jpg">
-                        </div>
-                        <div class="card-action">
-                            <a href="{{url_for('search_recipe')}}">Search a Recipe</a>
-                        </div>
-                    </div>  
-                </div>
-                <div class="l12 m12 s12" style="clear:both">      
-                    <div class="card" style="width:300px;display:inline-block">
-                        <div class="card-image">
-                            <img src="../static/image/img4.jpg">
-                        </div>
-                        <div class="card-action">
-                            <a href="{{url_for('add_recipe')}}">Add a Recipe</a>
-                        </div>
-                    </div>    
-                </div>
-            </div>    
-
-           
+{% extends 'base.html' %} {% block content %}
+<div class="image-home">
+  <h2>Welcome to CookBook</h2>
+  <img src="../static/image/img1.jpg" alt="sorry!" />
+  <div
+    class="row card-panel grey lighten-5"
+    style="margin: 10px; width: 85%; letter-spacing: 2px; line-height: 2;"
+  >
+    <h6>
+      <p style="line-height: 2;">
+        "Cooking is all about people. Food is maybe the only universal thing
+        that really has the power to bring everyone together. No matter what
+        culture, everywhere around the world, people eat together."
+      </p>
+      <p style="padding-left: 20em; line-height: 2;">-Guy Fieri</p>
+    </h6>
+    <p>
+      Foodie'sCookbook is webpage for any person who likes food. In here, you
+      can find recipes to try or share your special recipe to all food lovers.
+      The foodies get a to try different recipes from various culture .Lets all
+      join in and enjoy food.
+    </p>
+    <p>Happy Cooking!</p>
   </div>
-          
-{% endblock %}    
+  <div class="row">
+    <div class="col l6 m6 s12" style="float: left;">
+      <div class="card" style="width: 300px; display: inline-block;">
+        <div class="card-image">
+          <img src="../static/image/img2.jpg" />
+        </div>
+        <div class="card-action">
+          <a
+            href="{{url_for('search_recipe')}}"
+            style="color: blueviolet; font-size: medium;"
+            >Search a Recipe</a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="col l6 m6 s12" style="float: left;">
+      <div class="card" style="width: 300px; display: inline-block;">
+        <div class="card-image">
+          <img src="../static/image/img4.jpg" />
+        </div>
+        <div class="card-action">
+          <a
+            href="{{url_for('add_recipe')}}"
+            style="color: blueviolet; font-size: medium;"
+            >Add a Recipe</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+{% endblock %}
