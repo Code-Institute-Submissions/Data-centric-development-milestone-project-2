@@ -15,7 +15,7 @@ app.config["MONGO_URI"] = ('mongodb+srv://root1:Ranger12@myfirstcluster.xtvot.mo
 mongo = PyMongo(app)
 connect(db='cookbook', host ='mongodb+srv://root1:Ranger12@myfirstcluster.xtvot.mongodb.net/cookbook?retryWrites=true&w=majority')
 
-
+# Create Dcoument
 class Recipe(Document):
     title = StringField(required=True, max_length=200)
     cuisine_name = StringField(required=True)
@@ -25,10 +25,12 @@ class Recipe(Document):
     step=ListField(field=StringField(),required=True, max_length=30)
     image=URLField(required=True)
 
+#Home page
 @app.route('/')
 def home():
     return render_template("home.html")
 
+#to search 
 @app.route('/search_recipe')
 def search_recipe():
     return render_template("search_recipe.html")
@@ -40,9 +42,7 @@ def get_recipe():
         print("hi!")
         print(results.count())
         return render_template('recipe_list.html', recipe=results)
-        
-
-
+ 
 @app.route('/recipe_list')
 def recipe_list():
     return render_template("recipe_list.html", recipe=mongo.db.recipe.find())
@@ -116,9 +116,9 @@ def delete_recipe(recipe_id):
     mongo.db.recipe.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('recipe_list'))
 
-@app.errorhandler(Exception)
+'''@app.errorhandler(Exception)
 def handle_500(e):
-    return render_template("home.html"), 500
+    return render_template("home.html"), 500 '''
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),

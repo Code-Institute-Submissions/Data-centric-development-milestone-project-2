@@ -21,9 +21,6 @@ input {
   height: 2.7ex;
 }
 
-html{
-    background-color: green;
-}
 @media only screen and (min-width: 0)
 html {
     font-size: 25px;
