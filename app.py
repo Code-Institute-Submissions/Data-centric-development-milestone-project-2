@@ -108,7 +108,6 @@ def update_recipe(recipe_id):
         image = recipe_dict['image'] , 
         ingredients=recipe_dict['ingredients'],
         step=recipe_dict['method'])
-
     return redirect(url_for('recipe_list'))
 
 
@@ -117,12 +116,11 @@ def delete_recipe(recipe_id):
     mongo.db.recipe.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('recipe_list'))
 
-'''@app.errorhandler(Exception)
+@app.errorhandler(Exception)
 def handle_500(e):
-    return render_template("home.html"), 500'''
+    return render_template("home.html"), 500
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
             port=int(os.environ.get('PORT')),
             debug=True)
-   
