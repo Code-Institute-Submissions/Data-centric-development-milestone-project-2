@@ -38,10 +38,16 @@ def search_recipe():
 @app.route('/get_recipe',methods=['POST','GET'])
 def get_recipe():
         query = request.form.get("query")
-        results=Recipe.objects(title__icontains=query)
-        print("hi!")
-        print(results.count())
+        results = mongo.db.recipe.find({
+        '$or': [
+            {'title': query},
+            {'ingredient': query},
+            {'type_name': query},
+            {'cuisine_name': query}
+            ]
+        })
         return render_template('recipe_list.html', recipe=results)
+        
  
 @app.route('/recipe_list')
 def recipe_list():
@@ -116,9 +122,9 @@ def delete_recipe(recipe_id):
     mongo.db.recipe.remove({'_id': ObjectId(recipe_id)})
     return redirect(url_for('recipe_list'))
 
-'''@app.errorhandler(Exception)
+@app.errorhandler(Exception)
 def handle_500(e):
-    return render_template("home.html"), 500 '''
+    return render_template("on_error.html"), 500 
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'),
