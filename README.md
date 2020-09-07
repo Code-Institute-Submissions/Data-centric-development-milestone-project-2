@@ -1,10 +1,10 @@
-#1 Foodie's Cookbook
+# Foodie's Cookbook
 
-Agenda
+### Agenda
 
-This webpage is to assist a user to search for food recipes and/or add his own recipe to it.
+This webpage is to assist a user to search for food recipes and/or add his own recipe to the webpage.
 
-Typographic
+### Typographic
 
 The color and fonts have been selected to suit the agenda of the website. Aimed at having colors and font that are pleasant,clear and readable for the users to explore information in our website.
 
