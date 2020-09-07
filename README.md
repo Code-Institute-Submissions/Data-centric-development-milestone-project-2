@@ -24,31 +24,33 @@ A user who wish to try any new recipe  can search in the webpage or would like t
 - Header allows users to see the webpage name and also to navigate to different pages of Foodie's Cookbook.
 - Navbar allows user to add, search ,list recipes on the webpage.
 - Home page  allows user to  search or add recipe.
-- User can navigate to 
+- Recipe index page lists all the recipes in the webpage.
+- In Recipe index page the user is allowed to view, edit and delete recipes.
+- Add reipe page allows the user to add a recipe to the database.
+- Search page allows user to search recipes based on cuisine, type, title. 
+- we have an error page to load during errors.
 #### Features left to Implement
-- Make this webpage available for entire Sweden.
-- Make this website support tour bookings.
-- Make this website suport Bike hiring.
-- Make this website support hotel bookings.
+- Add in Login/Signup Feature
+- Option to upload Image and store it locally.
+- Add and remove items directly.
 ### Technologies used
-List of Technologies used
-Javascript
-API
-HTML
-CSS
-Boostrap
-Gitpod
-Github
-Widgets
-Google places library
-Emailjs
-Best Practices
-Hex code is used throughout the project.
-Code has been checked in the https://validator.w3.org/
-Javascript code is checked in https://jshint.com.
-Git comment message clearly says the problem fixed.
-Atomic Git comments to acheive version control.
-Testing
+#### List of Technologies used
+- Flask
+- MongoDB
+- materializecss
+- Javascript
+- HTML
+- CSS
+- Boostrap
+- Gitpod
+- Github
+- Heroku
+### Best Practices
+- Python code has been validated with Pylint 
+- Javascript code is checked in https://jshint.com.
+- Git comment message clearly says the problem fixed.
+
+### Testing
 The webpage is supportive to different browsers and screen-sizes. Different Screen size was tested using simulator for screen size available in chrome developer tool.
 
 List of screen sizes tested are

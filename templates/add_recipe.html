@@ -1,63 +1,106 @@
 {% extends 'base.html' %} {% block content %}
 <h3>Add Recipe</h3>
 <div class="row">
-    <form action="{{ url_for('insert_recipe') }}" method="POST"  class="col s12" id="add_items">
-        <div class="row">
-            <div class="input-field col s6">
-                <i class="material-icons prefix">title</i>
-                <input id="title" type="text" name="title" class="validate" required>
-                <label for="title">Recipe Title</label>
-            </div>
-            <div class="input-field col s6">
-                <i class="material-icons prefix">local_dining</i>
-                <input id="cuisine_name" name="cuisine_name" type="text" class="validate" required>
-                <label for="cuisine_name">Cuisine Name</label>
-            </div>
-            <div class="input-field col s6">
-                <i class="material-icons prefix">room_service</i>
-                <input id="type_name" type="text" name="type_name" class="validate" required>
-                <label for="type_name">Type</label>
-            </div>
-            
-             <div class="input-field col s6">
-                <i class="material-icons prefix">image</i>
-                <input id="image" type="text" name="image" class="file-path validate" required>
-                <label for="image">Image Url</label>
-            </div>
+  <form
+    action="{{ url_for('insert_recipe') }}"
+    method="POST"
+    class="col s12"
+    id="add_items"
+  >
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">title</i>
+        <input id="title" type="text" name="title" class="validate" required />
+        <label for="title">Recipe Title</label>
+      </div>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">local_dining</i>
+        <input
+          id="cuisine_name"
+          name="cuisine_name"
+          type="text"
+          class="validate"
+          required
+        />
+        <label for="cuisine_name">Cuisine Name</label>
+      </div>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">room_service</i>
+        <input
+          id="type_name"
+          type="text"
+          name="type_name"
+          class="validate"
+          required
+        />
+        <label for="type_name">Type</label>
+      </div>
 
-            <div class="input-field col s12">
-                <i class="material-icons prefix">description</i>
-                <input id="description" name="description" type="text" required >
-                <label for="description">Recipe Description</label>
-            </div>
-            
-                <div id="ingredients" class="input-field col s6">
-                    <i class="material-icons prefix">shopping_basket</i>
-                    <label for="ingredients">Ingredients</label>
-                    <input class="input" type="text" name="ingredient" value="" required>
-                </div>
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">add</i>
-                    <input id="add-ingredient" type="button"  value="Add Ingredient" style="width:auto;height:auto">
-                    <i class="material-icons prefix">remove</i>
-                    <input id="remove-ingredient" type="button" value="Remove Ingredient" style="width:auto;height:auto">
-                </div>
-                <div id="steps" class="input-field col s12">
-                    <i class="material-icons prefix">list</i>
-                    <label for="steps">Steps</label>
-                    <input class="input" type="text" name="step" value="" required>
-                </div>
-                <div class="input-field col s12">
-                    <i class="material-icons prefix">add</i>
-                    <input id="add-step" type="button"  value="Add a step" style="width:auto;height:auto">
-                    <i class="material-icons prefix">remove</i>
-                    <input id="remove-step" type="button" value="Remove a step" style="width:auto;height:auto">
-                </div>
-         
-        </div>
-        <button class="btn waves-effect waves-light" type="submit" name="action">Post recipe
-            <i class="material-icons right">send</i>
-        </button>
-    </form>
+      <div class="input-field col s6">
+        <i class="material-icons prefix">image</i>
+        <input
+          id="image"
+          type="text"
+          name="image"
+          class="file-path validate"
+          required
+        />
+        <label for="image">Image Url</label>
+      </div>
+
+      <div class="input-field col s12">
+        <i class="material-icons prefix">description</i>
+        <input id="description" name="description" type="text" required />
+        <label for="description">Recipe Description</label>
+      </div>
+
+      <div id="ingredients" class="input-field col s6">
+        <i class="material-icons prefix">shopping_basket</i>
+        <label for="ingredients">Ingredients</label>
+        <input class="input" id="ingredients" type="text" name="ingredient" value="" required />
+      </div>
+      <div class="input-field col s12">
+        <i class="material-icons prefix">add</i>
+        <input
+          id="add-ingredient"
+          type="button"
+          value="Add Ingredient"
+          style="width: auto; height: auto;"
+        />
+        <i class="material-icons prefix">remove</i>
+        <input
+          id="remove-ingredient"
+          type="button"
+          value="Remove Ingredient"
+          style="width: auto; height: auto;"
+        />
+      </div>
+      <div id="steps" class="input-field col s12">
+        <i class="material-icons prefix">list</i>
+        <label for="steps">Steps</label>
+        <input class="input" id="steps" type="text" name="step" value="" required />
+      </div>
+      <div class="input-field col s12">
+        <i class="material-icons prefix">add</i>
+        <input
+          id="add-step"
+          type="button"
+          value="Add a step"
+          style="width: auto; height: auto;"
+        />
+        <i class="material-icons prefix">remove</i>
+        <input
+          id="remove-step"
+          type="button"
+          value="Remove a step"
+          style="width: auto; height: auto;"
+        />
+      </div>
+    </div>
+    <button class="btn waves-effect waves-light" type="submit" name="action">
+      Post recipe
+      <i class="material-icons right">send</i>
+    </button>
+  </form>
 </div>
 {% endblock %}
