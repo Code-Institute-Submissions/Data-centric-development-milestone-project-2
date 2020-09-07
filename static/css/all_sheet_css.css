@@ -21,7 +21,8 @@ input {
   height: 2.7ex;
 }
 
-@media only screen and (min-width: 0)
-html {
-    font-size: 25px;
+@media screen and (max-width: 1393px) {
+    html{
+        font-size: 20px;
+    }
 }

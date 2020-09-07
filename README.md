@@ -8,33 +8,29 @@ This webpage is to assist a user to search for food recipes and/or add his own r
 
 The color and fonts have been selected to suit the agenda of the website. Aimed at having colors and font that are pleasant,clear and readable for the users to explore information in our website.
 
-UX Design
+### UX Design
 
 The initial idea of the website and its ux Design has been created in Wireframe. Click here to view the desktop and mobile view.
 
-User Stories
+### User Stories
 
 A user who wish to try any new recipe  can search in the webpage or would like to share his own recipe through this website. 
 
-A visiting user be able to search for new recipes based on type, cuisine, name of the recipe.
-A visiting user be able to see a list of places of his interest.
-A visiting user be able to send queries or feedback.
-Features
-Existing Features
-Header allows users to see the company name and also to navigate to different pages of Stockholm Tours.
-Home page shows the real-time weather with the weather condition background on the weather display.
-Explore page shows the popular places in Stockholm based the User selections marked in the Google maps and also listed in a list.
-Explore page shows some facts of Sweden listed in a box.
-EXplore page shows image scrol of popular places in sweden.
-Contact page allows the user to share queries and feedback to the admin.
-Admin gets an email through EmailJs.com that the user sends through Contact form.
-Footer Section - displays all the social media network of this webpage.
-Features left to Implement
-Make this webpage available for entire Sweden.
-Make this website support tour bookings.
-Make this website suport Bike hiring.
-Make this website support hotel bookings.
-Technologies used
+- A visiting user be able to search for new recipes based on type, cuisine, name of the recipe.
+- A visiting user be able to see a list of all the recipes on the webpage.
+- A visiting user be able to add thier own recipe.
+### Features
+#### Existing Features
+- Header allows users to see the webpage name and also to navigate to different pages of Foodie's Cookbook.
+- Navbar allows user to add, search ,list recipes on the webpage.
+- Home page  allows user to  search or add recipe.
+- User can navigate to 
+#### Features left to Implement
+- Make this webpage available for entire Sweden.
+- Make this website support tour bookings.
+- Make this website suport Bike hiring.
+- Make this website support hotel bookings.
+### Technologies used
 List of Technologies used
 Javascript
 API
