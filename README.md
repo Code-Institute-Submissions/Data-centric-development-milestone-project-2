@@ -51,57 +51,44 @@ A user who wish to try any new recipe  can search in the webpage or would like t
 - Git comment message clearly says the problem fixed.
 
 ### Testing
-The webpage is supportive to different browsers and screen-sizes. Different Screen size was tested using simulator for screen size available in chrome developer tool.
+#### Header Section
+##### Test Cases for Desktop view
+- Company name should appear on the header.
+- Menu options should be displayed horizontally in the header.
+- User should be able to navigate to Home Page when clicked the home option in the navigationbar.
+- User should be able to navigate to Recipe Index Page when clicked the Recipe Index  option in the navigation bar.
+- User should be able to navigate to Add Recipe Page when clicked the Add recipe option in the navigation bar.
+- User should be able to navigate to Search Page when clicked the Search recipe option in the navigation bar.
+#####  Test Cases for mobile view
+- Company name should appear on the header.
+- Navbar should be collapse and button with pulldown menu option must appear.
+- User should be able to navigate to Home Page when clicked the home option in the navigationbar.
+- User should be able to navigate to Recipe Index Page when clicked the Recipe Index  option in the navigation bar.
+- User should be able to navigate to Add Recipe Page when clicked the Add recipe option in the navigation bar.
+- User should be able to navigate to Search Page when clicked the Search recipe option in the navigation bar.
+#### Home Page
+##### Test Cases for Desktop view
+- User should be able to view the welcome message.
+- User should be able to see image and a write-up about Cooking.
+- User should be able to see Add a Recipe card  and Search a recipe card arranged on the same row.
+rd arranged one below the other.
+- User should goto Search page when Search a recipe button is clicked.
+- User should goto add Recipe page when clicked the Add recipe button.
+- User should be able to see a menu bar on this page.
 
-List of screen sizes tested are
-Moto G4
-Galaxy S5
-pixel 2
-pixel 2 XL
-iphone 5/se
-iphone 6/7/8
-iphone6/7/8 plus
-iphone X
-ipad
-ipad pro
-Surface Duo
-Galaxy Fold
-List of Web-Browsers tested are
-Internet Explorer.
-Google Chrome.
-Mozilla Firefox.
-Safari
-Test Cases
-Header Section
-Test Cases for Desktop view
-Company name should appear on the header.
-Menu options should be displayed horizontally in the header.
-User should be able to navigate to Home Page when clicked the home option in the navigationbar.
-User should be able to navigate to Explore Page when clicked the Explore option in the navigation bar.
-User should be able to navigate to contact Page when clicked the contact option in the navigation bar.
-Test Cases for mobile view
-Company name should appear on the header.
-Navbar should be collapse and button with pulldown menu option must appear.
-User should be able to navigate to Home Page when clicked the home option in the navigationbar.
-User should be able to navigate to Explore Page when clicked the Explore option in the navigation bar.
-User should be able to navigate to contact Page when clicked the contact option in the navigation bar.
-Home Page
-Test Cases for Desktop view
-User should be able to view the real-time weather forecast of Stockholm.
-User should be able to see the weather condition as the background of the weather forecast.
-User should be able to view a short introduction on Stockholm.
-User should be able to see a menu bar on this page.
-User should be able to view footer and header in this page.
 Test Cases for Mobile view
-User should be able to view the real-time weather forecast of Stockholm.
-User should be able to see the weather condition as the background of the weather forecast.
-User should be able to view a short introduction on Stockholm.
-User should be able to see a Menu bar collapsed on this page.
-User should be able to view footer and collapsed header Menu in this page.
-Explore Page
+- User should be able to view the welcome message.
+- User should be able to see image and a write-up about Cooking.
+- User should be able to see Add a Recipe card  and Search a recipe card arranged one below the other.
+- User should goto Search page when Search a recipe button is clicked.
+- User should goto add Recipe page when clicked the Add recipe button.
+- User should be able to see a menu bar on this page.
+
+#### Recipe Index Page
 Test Cases for Desktop view
-User should be able to view the menu bar.
-User should be able to see and click radio buttons to pick their option.
+- User should be able to view all the recipes list as card.
+- User should be able to see each recipe card has the details like title of the recipe,image and descrition.
+- User should be able to see Add  buttons to pick their option.
 User should be able to view a google map of Stockholm.
 User should be able to view list of cafes in stockholm when he clicks the cafe option button.
 User should be able to view list of historic places in stockholm when selected the Culture and Histroy option.
