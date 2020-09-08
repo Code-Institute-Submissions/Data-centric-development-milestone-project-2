@@ -45,7 +45,6 @@ def get_recipe():
     results = mongo.db.recipe.find({
         '$or': [
             {'title': query},
-            {'ingredient': query},
             {'type_name': query},
             {'cuisine_name': query}
             ]
@@ -64,7 +63,8 @@ def view_recipe(recipe_id):
     """ Displays full reccipe"""
     the_recipe = mongo.db.recipe.find_one({"_id": ObjectId(recipe_id)})
     all_cuisines = mongo.db.cuisine.find()
-    return render_template("view_recipe.html", item=the_recipe, cuisine=all_cuisines)
+    return render_template("view_recipe.html",
+                           item=the_recipe, cuisine=all_cuisines)
 
 
 @app.route('/add_recipe')
@@ -89,13 +89,7 @@ def insert_recipe():
         image=recipe_dict['image'],
         ingredients=recipe_dict['ingredients'],
         step=recipe_dict['method']
-
     )
-    print(ingredients)
-    print(method)
-    print(recipe_dict)
-    print(recipe_doc)
-    print("inside insertrecipe app.py")
     recipe_doc.save()
     return redirect(url_for('recipe_list'))
 
