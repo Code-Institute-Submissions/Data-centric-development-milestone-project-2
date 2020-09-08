@@ -186,4 +186,3 @@ The recipes for this webpage was obtained from the folloing pages.
 - https://www.allrecipes.com/recipe/256398/spongy-japanese-cheesecake/
 
 The images and the recipes are used for educational purpose only.
-
