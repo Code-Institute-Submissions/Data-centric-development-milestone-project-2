@@ -28,7 +28,7 @@ A user who wish to try any new recipe  can search in the webpage or would like t
 - In Recipe index page the user is allowed to view, edit and delete recipes.
 - Add reipe page allows the user to add a recipe to the database.
 - Search page allows user to search recipes based on cuisine, type, title. 
-- we have an error page to load during errors.
+- we have an error page to load on occurance of errors.
 #### Features left to Implement
 - Add in Login/Signup Feature
 - Option to upload Image and store it locally.
@@ -46,7 +46,13 @@ A user who wish to try any new recipe  can search in the webpage or would like t
 - Github
 - Heroku
 ### Best Practices
-- Python code has been validated with Pylint 
+- Python code has been validated with Pylint.
+    These errors are due to Framework.
+    1. app.py:120:13: E1101: Class 'Recipe' has no 'objects' member (no-member).
+    2. app.py:140:0: C0103: Argument name "e" doesn't conform to snake_case naming style (invalid-name).
+    3. app.py:140:15: W0613: Unused argument 'e' (unused-argument)
+    4. app.py:7:0: W0611: Unused InternalServerError imported from werkzeug.exceptions (unused-import)
+
 - Javascript code is checked in https://jshint.com.
 - Git comment message clearly says the problem fixed.
 
@@ -59,7 +65,8 @@ A user who wish to try any new recipe  can search in the webpage or would like t
 - User should be able to navigate to Recipe Index Page when clicked the Recipe Index  option in the navigation bar.
 - User should be able to navigate to Add Recipe Page when clicked the Add recipe option in the navigation bar.
 - User should be able to navigate to Search Page when clicked the Search recipe option in the navigation bar.
-#####  Test Cases for mobile view
+Test Cases for mobile view
+
 - Company name should appear on the header.
 - Navbar should be collapse and button with pulldown menu option must appear.
 - User should be able to navigate to Home Page when clicked the home option in the navigationbar.
@@ -67,7 +74,8 @@ A user who wish to try any new recipe  can search in the webpage or would like t
 - User should be able to navigate to Add Recipe Page when clicked the Add recipe option in the navigation bar.
 - User should be able to navigate to Search Page when clicked the Search recipe option in the navigation bar.
 #### Home Page
-##### Test Cases for Desktop view
+
+Test Cases for Desktop view
 - User should be able to view the welcome message.
 - User should be able to see image and a write-up about Cooking.
 - User should be able to see Add a Recipe card  and Search a recipe card arranged on the same row.
@@ -88,45 +96,43 @@ Test Cases for Mobile view
 Test Cases for Desktop view
 - User should be able to view all the recipes list as card.
 - User should be able to see each recipe card has the details like title of the recipe,image and descrition.
-- User should be able to see Add  buttons to pick their option.
-User should be able to view a google map of Stockholm.
-User should be able to view list of cafes in stockholm when he clicks the cafe option button.
-User should be able to view list of historic places in stockholm when selected the Culture and Histroy option.
-User should be able to View list of shopping places in stockholm when selected the Shopping option.
-User should be able to View list of Art Galleries in stockholm when selected the Art Gallery option.
-User should be able to view places marked in alphabets on google maps after clicking the radio button.
-User should be able to view list of places and map side by side.
-User should be able to see list of facts and image scroll of stockholm pictures side by side.
-User should be able to see the footer.
+- User should be able to see View,Edit, Delete option for every recipe listed in the page.
+- User should be able to edit the recipe when clicked edit.
+- User should be able to view the recipe when view option is clicked.
+- User should be able to delete the recipe on clicking delete.
 Test Cases for Mobile view
-User should be able to view the menu bar.
-User should be able to see and click radio buttons to pick their option.
-User should be able to view a google map of Stockholm.
-User should be able to view list of cafes in stockholm when he clicks the cafe option button.
-User should be able to view list of historic places in stockholm when selected the Culture and Histroy option.
-User should be able to View list of shopping places in stockholm when selected the Shopping option.
-User should be able to View list of Art Galleries in stockholm when selected the Art Gallery option.
-User should be able to view places marked in alphabets on google maps after clicking the radio button.
-User should be able to view list of places and map side by side.
-User should be able to see list of facts and image scroll of stockholm pictures side by side.
-User should be able to see the footer.
-Contact Page
+- User should be able to view all the recipes list as card.
+- User should be able to see each recipe card has the details like title of the recipe,image and descrition.
+- User should be able to see View,Edit, Delete option for every recipe listed in the page.
+- User should be able to edit the recipe when clicked edit.
+- User should be able to view the recipe when view option is clicked.
+- User should be able to delete the recipe on clicking delete.
+#### Add Page
 Test Cases for Desktop view
-User must be able to view a contact form with Name , Email and Message label and textbox.
-Try to submit the empty form and verify that an error message about the required fields (Name,Email) appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears.
-When user sends the feedback /query the admin must receive the same via email.
-User should be able to view header and footer.
+
+- User shouls be able to add the recipe details.
+- User should not be able to submit the form leaving any fields empty.
+
 Test Cases for Mobile view
-User must be able to view a contact form with Name , Email and Message label and textbox.
-Try to submit the empty form and verify that an error message about the required fields (Name,Email) appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears.
-When user sends the feedback /query the admin must receive the same via email.
-User should be able to view header and footer.
-Fixed Issues
-Fixed the google map marker api too customize the marker.
-Fixed the list of places adding upon after everyclick without the list clearing itself.
-Deployment
+
+- User shouls be able to add the recipe details.
+- User should not be able to submit the form leaving any fields empty.
+
+#### Search Page
+Test Cases for Desktop view
+
+ - user cannot leave the search box empty.
+ - User can search recipe based on name, cuisine, type.
+Test Cases for Mobile view 
+ - user cannot leave the search box empty.
+ - User can search recipe based on name, cuisine, type.
+
+
+### Fixed Issues
+Fixed issue to store list of fields into database.
+Fixed adding input dynamically when add button is clicked.
+
+#### Deployment
 The steps to deploy the project locally.
 
 Download the files form the Git respository.
