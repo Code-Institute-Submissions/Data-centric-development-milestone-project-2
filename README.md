@@ -10,7 +10,7 @@ The color and fonts have been selected to suit the agenda of the website. Aimed 
 
 ### UX Design
 
-The initial idea of the website and its ux Design has been created in Wireframe. Click here[] to view the desktop and mobile view.
+The initial idea of the website and its ux Design has been created in Wireframe. Click here[https://github.com/Vanitha-krishnan/Data-centric-development-milestone-project/blob/master/wireframe/Foodiecookbook.png] to view the desktop and mobile view.
 
 ### User Stories
 
