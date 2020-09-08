@@ -9,8 +9,7 @@ from werkzeug.exceptions import InternalServerError
 
 app = Flask(__name__)
 app.config["MONGO_DBNAME"] = 'cookbook'
-app.config["MONGO_URI"] = ('mongodb+srv://root1:Ranger12@myfirstcluster.xtvot.mongodb.net/' +
-                           'cookbook?retryWrites=true&w=majority')
+app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
 mongo = PyMongo(app)
 connect(db='cookbook', host='mongodb+srv://root1:Ranger12@myfirstcluster.xtvot.mongodb.net/cookbook?retryWrites=true&w=majority')
