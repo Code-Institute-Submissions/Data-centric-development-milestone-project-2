@@ -35,16 +35,20 @@ A user who wish to try any new recipe  can search in the webpage or would like t
 - Add and remove items directly.
 ### Technologies used
 #### List of Technologies used
-- Flask
-- MongoDB
-- materializecss
-- Javascript
-- HTML
-- CSS
-- Boostrap
-- Gitpod
-- Github
-- Heroku
+- HTML5
+- CSS3 - CSS3 is used for custome styling the elements.
+- JavaScript - JavaScript function is used to overcome the bug in the datepicker.
+- JQuery - Jquery is used to initialize the Materialize components.
+- Materialize Framework - Materialize front-end framework is used to make website responsive.
+- Python - Python is used as the back-end programming language.
+- Flask - Python microframework Flask is used to create this project.
+- Jinja - Jinja templating language is used with Flask in the HTML code.
+- Balsamiq - Balsamiq is used to create wireframes for the project.
+- PyMongo - It is a Python distribution that contains tools to work with MongoDB.
+- MongoDB - It is a NoSql database that is use to store data at the backend. 
+- Git & Github - Used for version control.
+- Heroku - It is used as hosting platform to deploy the project.
+
 ### Best Practices
 - Python code has been validated with Pylint.
     These errors are due to Framework.
@@ -55,6 +59,9 @@ A user who wish to try any new recipe  can search in the webpage or would like t
 
 - Javascript code is checked in https://jshint.com.
 - Git comment message clearly says the problem fixed.
+- W3C Markup Validation Service for HTML
+- W3C Markup Validation Service for CSS
+
 
 ### Testing
 #### Header Section
@@ -112,44 +119,71 @@ Test Cases for Desktop view
 
 - User shouls be able to add the recipe details.
 - User should not be able to submit the form leaving any fields empty.
+- User should not be allowed to submit recipe without atleast one ingredient.
+- User should not be allowed to submot recipe without atleast one instruction.
 
 Test Cases for Mobile view
 
 - User shouls be able to add the recipe details.
 - User should not be able to submit the form leaving any fields empty.
+- User should not be allowed to submit recipe without atleast one ingredient.
+- User should not be allowed to submot recipe without atleast one instruction.
 
 #### Search Page
+
 Test Cases for Desktop view
 
  - user cannot leave the search box empty.
  - User can search recipe based on name, cuisine, type.
+ - All the recipes has to be displayed on click of Reset button.
+
 Test Cases for Mobile view 
  - user cannot leave the search box empty.
  - User can search recipe based on name, cuisine, type.
-
+ - All the recipes has to be displayed on click of Reset button.
 
 ### Fixed Issues
 Fixed issue to store list of fields into database.
 Fixed adding input dynamically when add button is clicked.
 
 #### Deployment
-The steps to deploy the project locally.
+Deployment in Github
+1. Go to Data-centric-development-milestone-project Github Repository
+2. Click on Code beside Gitpod.
+3. A drop down menu open then click on Download Zip
+4. Unzip the downloaded zip file.
+6. Create a database in MongoDB called cookbook.
+7. Create a collection with name "recipe"
+8. Open app.py file and install requirements.txt by running comman pip3 install -r requirements.txt.
+9. Create env.py file and add MONGO_URI and SECRET_KEY.
+10. Now run the app.py by running code python3 app.py
 
-Download the files form the Git respository.
-Download option will get the zip folder of the repo.
-Extract the zip folder of your choice.
-Run the index.HTML in your browser.
-Deployment via Gitpod.
+ Deployment in Heroku
 
-In Gitpod,type:python3 -m http.server in the terminal and press enter.
-List of open ports will be listed.
-Choose port -8000 and cick Open Browser.
-Now the project is open in the new tab.
-Credits
-Media
-The images used in the project are obtained from the following:-
+  To deploy the website in Heroku, follow the instructions given below.
 
-Photo by Raphael Andres on Unsplash.
-Photo by Anders Jildén on Unsplash.
-Code
-The google maps api code was obatined from https://developers.google.com/maps/documentation/javascript/examples/place-search-pagination#all.
+ 1. Login to Heroko account.
+ 2. Created the app in Heroku.
+ 3. Create App by providing Name and Region.
+ 4. Also create requirement.txt in terminal window using  pip3 freeze --local > requirements.txt.
+ 5. Create Procfile
+ 6. Add,commit and push those files in github.
+ 7. Go to Settings at the top. Then click on Reveal Config Vars.
+ 8.	In Config Vars add IP with value 0.0.0.0 then add PORT as 5000 then add SECRET_KEY then add MONGO_URI and then add MONGO_DBNAME which is the name of database.
+ 9. App is deployed.
+ 10. In domians in settings has the link to your app.
+ 11. Click the link to see your webpage launched.
+ 
+
+#### Credits
+
+The recipes for this webpage was obtained from the folloing pages.
+
+- https://www.homecookingadventure.com/recipes/chocolate-rose-cake
+- https://naturallynidhi.com/tomato-basil-focaccia/
+- https://www.delscookingtwist.com/easy-fluffy-american-pancakes/
+- https://food.ndtv.com/recipe-crunchy-iceberg-dumpling-914651
+- https://www.allrecipes.com/recipe/256398/spongy-japanese-cheesecake/
+
+The images and the recipes are used for educational purpose only.
+

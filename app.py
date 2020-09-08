@@ -3,7 +3,7 @@ import os
 from flask import Flask, render_template, redirect, request, url_for
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
-from mongoengine import StringField, ListField, URLField, connect, Document
+from mongoengine import StringField, ListField, URLField, Document
 from werkzeug.exceptions import InternalServerError
 
 
@@ -12,7 +12,6 @@ app.config["MONGO_DBNAME"] = 'cookbook'
 app.config["MONGO_URI"] = os.getenv('MONGO_URI', 'mongodb://localhost')
 
 mongo = PyMongo(app)
-connect(db='cookbook', host='mongodb+srv://root1:Ranger12@myfirstcluster.xtvot.mongodb.net/cookbook?retryWrites=true&w=majority')
 
 
 class Recipe(Document):
